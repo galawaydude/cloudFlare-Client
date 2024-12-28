@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AddressModal from '../../../components/address/addressModal';
-import EditProfileModal from '../../../components/editprofile/editprofile';
+import EditProfileModal from '../../../components/editprofile/Editprofile';
 import './account.css';
 
 const Account = () => {
