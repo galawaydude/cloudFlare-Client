@@ -1,0 +1,253 @@
+/* General Account Page Layout */
+.acc-page {
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Styling */
+.acc-section {
+  margin-bottom: 3rem;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--pri);
+  transition: all 0.3s ease;
+}
+
+.acc-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--pri);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--pri);
+}
+
+/* Personal Details */
+.acc-personal-details .acc-details-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.acc-details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.acc-buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: 50%;
+}
+
+/* Button Styling */
+.acc-btn {
+  flex-direction: column;
+  background-color: var(--pri);
+}
+
+.acc-btn-edit {
+  border: 1px solid var(--pri);
+  color: black;
+  background-color: rgba(10, 72, 52, 0.2);
+}
+
+.acc-btn-edit:hover,
+.acc-btn-orders:hover {
+  filter: brightness(110%);
+  transform: translateY(-1px);
+}
+
+.acc-btn i {
+  font-size: 1.1rem;
+}
+
+/* Addresses Section */
+.acc-addresses-list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.acc-address-item {
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #eaeaea;
+  transition: border-color 0.3s ease;
+}
+
+.acc-address-item.default-address {
+  border: 2px solid var(--pri);
+  background-color: rgba(var(--pri-rgb), 0.02);
+}
+
+.acc-address-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.acc-address-text {
+  flex: 1;
+}
+
+.acc-address-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.acc-btn-edit-address {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  color: var(--pri);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+}
+
+.acc-btn-edit-address:hover {
+  background-color: rgba(var(--pri-rgb), 0.1);
+}
+
+.def-label {
+  font-size: 0.8rem;
+  color: #4a5568;
+}
+
+.acc-btn-default {
+  background: none;
+  border: 1px solid var(--pri);
+  color: var(--pri);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.acc-btn-default:hover {
+  background-color: var(--pri);
+  color: white;
+}
+
+.acc-btn-add-address {
+  background-color: white;
+  color: var(--pri);
+  border: 2px solid var(--pri);
+  width: 100%;
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+.acc-btn-add-address:hover {
+  background-color: var(--pri);
+  color: white;
+}
+
+/* Modal Styling */
+.acc-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.acc-modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.acc-modal-title {
+  font-size: 1.5rem;
+  color: var(--pri);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.acc-modal-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.acc-modal-input:focus {
+  outline: none;
+  border-color: var(--pri);
+  box-shadow: 0 0 0 3px rgba(var(--pri-rgb), 0.1);
+}
+
+.acc-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.acc-btn-cancel {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.acc-btn-submit {
+  background-color: var(--pri);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .acc-section {
+    padding: 1.25rem;
+  }
+
+  .acc-btn-edit,
+  .acc-btn-orders {
+    flex: 1;
+  }
+
+  .acc-address-content{
+    align-items: center;
+  }
+
+  .acc-address-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 650px) {
+  .acc-details-grid {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .acc-buttons-container {
+    width: 100%;
+  }
+
+  .acc-address-content{
+    flex-direction: column;
+  }
+}
