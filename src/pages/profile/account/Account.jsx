@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import AddressModal from '../../../components/address/AddressModal';
+import AddressModal from '../../../components/address/addressModal';
 import EditProfileModal from '../../../components/editprofile/editprofile';
 import './account.css';
 
